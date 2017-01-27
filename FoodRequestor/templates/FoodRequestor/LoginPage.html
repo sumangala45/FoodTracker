@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <script src="/static/scripts/jquery.min.js"></script>
+    <script src="/static/scripts/script.js"></script>
+    <h1>Registration Page</h1>
+
+</head>
+<body>
+    <div class="container">
+        <img src="bk/men.png">
+        <form>
+            <div class="form-input">
+                <input type="text" id ="name" placeholder="Type Your Name"><br/>
+            </div>
+            <div class="form-input">
+                <input type="email" id ="mailid" placeholder="Type Your MailID"><br/>
+            </div>
+            <div class="form-input">
+                <input type="text" id="userid" placeholder="Type User ID" ><br/>
+            </div>
+            <div class="form-input">
+                <input type="password" id ="pwd" placeholder="Type Password"><br/>
+            </div>
+            <div class="form-input">
+                <input type="password" id ="rpwd" placeholder="Retype Your Password"><br/>
+            </div>
+            <div class="form-input">
+                <input type="number" id ="contact" placeholder="Type Your Contact No"><br/>
+            </div>
+            <div class="form-input">
+                <input type="text" id ="desp" placeholder="Type Description of Food"><br/>
+            </div>
+            <div class="form-input">
+                <input type="text" id ="autocomplete" placeholder="Type Your Location" onFocus="geolocate()"><br/>
+                <label id="location_label"></label>
+            </div>
+            <div class="form-input">
+                <input type="submit" id ="register" value="Register" class="btn-submit">
+                <input type="reset" id ="reset" value="Reset" class="btn-reset">
+            </div>
+        </form>
+    </div>
+
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCW5nwXbjX0hwTDc7aJw11lHDBhkrhwlvU&libraries=places&=initAutocomplete"
+        async defer></script>
+</body>
+</html>

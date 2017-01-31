@@ -1,27 +1,25 @@
 
+
 body{
     margin :0 auto;
-    background: url("../images/Nature-Best-HD-Theme-Wallpaper.jpg");
+    background: url("/static/images/Nature-Best-HD-Theme-Wallpaper.jpg");
     background-repeat: no-repeat ;
     background-size: 100% 720px ;
 }
 .container{
     align-content: left;
-    width: 500px;
-    height: 500px;
-    text-align: center;
+    width: 400px;
+    height: 180px;
+
+    text-align: left;
     background-color: rgba(103,178,228,0.6) ;
     /*background-color: #3498DB ;*/
     /*border-radius: 4px;*/
     margin: 30px;
-    margin-top: 40px;
+    padding-left: 50px;
+    /*margin-top: 40px;*/
 }
-.container img{
-    width: 60px;
-    height: 60px;
-    margin-top: -30px;
-    margin-left: 10px;
-}
+
 input{
     width: 300px;
     height: 25px;
@@ -29,7 +27,6 @@ input{
     margin-bottom: 20px;
     background-color: #fff;
     padding-left: 10px;
-    padding-top: 10px;
 }
 .form-input::before{
     /*content: "\f0c0";*/
@@ -53,8 +50,8 @@ input{
 h1{
     font-family: "Monotype Corsiva";
     text-align: left;
+    font-size: 350%;
     padding-left: 100px;
-    font-size: 300%;
 }
 h5{
     padding-left: 10px;

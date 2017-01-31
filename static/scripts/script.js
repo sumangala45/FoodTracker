@@ -49,8 +49,37 @@ function geolocate() {
   }
       
 
+function reset(){
+    var name = document.getElementById("name");
+    var mailid = document.getElementById("mailid");
+    var userid = document.getElementById("userid");
+    var pwd = document.getElementById("pwd");
+    var rpwd = document.getElementById("rpwd");
+    var contact = document.getElementById("contact");
+    var desp = document.getElementById("desp");
+    var autocomplete = document.getElementById("autocomplete");
+    name.value = "";
+    mailid.value = "";
+    userid.value = "";
+    pwd.value = "";
+    rpwd.value = "";
+    contact.value = "";
+    desp.value = "";
+    autocomplete.value = "";
 
+}
 
+function register_to_db(){
+    var name = document.getElementById("name");
+    var mailid = document.getElementById("mailid");
+    var userid = document.getElementById("userid");
+    var pwd = document.getElementById("pwd");
+    var rpwd = document.getElementById("rpwd");
+    var contact = document.getElementById("contact");
+    var desp = document.getElementById("desp");
+    var autocomplete = document.getElementById("autocomplete");
+
+}
 
 // function submit(){
 //     var location = document.getElementById("location");

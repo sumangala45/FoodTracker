@@ -4,6 +4,6 @@ from django.conf.urls.static import static
 
 urlpatterns = patterns('',
 
-    url(r'^login/',  include('FoodRequestor.urls')),
+    url(r'^registration/',  include('FoodRequestor.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )

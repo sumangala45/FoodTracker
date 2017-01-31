@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/scripts/script.js"></script>
+    <h1>Registration Page</h1>
+
+</head>
+<body>
+    <div class="container">
+
+        <form action="reg_data_save" method="post">
+            {% csrf_token %}
+            <div class="form-input">
+                <input type="text" id ="name" name="name" placeholder="Type Your Name"><br/>
+            </div>
+            <div class="form-input">
+                <input type="email" id ="mailid" name="mailid" placeholder="Type Your MailID"><br/>
+            </div>
+            <div class="form-input">
+                <input type="text" id="userid" name="userid" placeholder="Type User ID" ><br/>
+            </div>
+            <div class="form-input">
+                <input type="password" id ="pwd" name ="pwd" placeholder="Type Password"><br/>
+            </div>
+            <div class="form-input">
+                <input type="password" id ="rpwd" name ="rpwd" placeholder="Retype Your Password"><br/>
+            </div>
+            <div class="form-input">
+                <input type="number" id ="contact" name ="contact" placeholder="Type Your Contact No"><br/>
+            </div>
+            <div class="form-input">
+                <input type="text" id ="desp" name ="desp" placeholder="Type Description of Food"><br/>
+            </div>
+            <div class="form-input">
+                <input type="text" id ="autocomplete" name="autocomplete" placeholder="Type Your Location" onFocus="geolocate()"><br/>
+                <label id="location_label"></label>
+            </div>
+            <div class="form-input">
+                <input type="submit" id ="register" value="Register" class="btn-submit" onclick="register_to_db()">
+                <input type="reset" id ="reset" value="Reset" class="btn-reset" onclick="reset()">
+            </div>
+        </form>
+    </div>
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCW5nwXbjX0hwTDc7aJw11lHDBhkrhwlvU&libraries=places&=initAutocomplete"
+        async defer></script>
+</body>
+</html>

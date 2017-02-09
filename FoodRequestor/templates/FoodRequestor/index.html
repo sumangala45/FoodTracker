@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Food Tracker</title>
 </head>
 <body>
-<font size="3" color="red" face="arial">subjest hublli junction</font><br>
-<font size="10" color="red" face="Book Antiqua">VRL LOGISTICS LTD</font><br>
-<font size="7" color="red" face="arial">Address</font><br>
 
-
+{% if status %}
+    <h1>Congratulation....!!</h1><br>
+    <h2>You are successfully logged in.</h2><br>
+    <h3>{{ name }}</h3><br>
+{% else %}
+    <h1>Sorry Invalid Login....!!</h1><br>
+    <h2>Please check your input credentials </h2><br>
+    <h3>{{ name }}</h3><br>
+{% endif %}
 </body>
 </html>

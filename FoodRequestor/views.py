@@ -26,9 +26,17 @@ def save_register_details(request):
     reg_obj.save()
     return render(request, 'FoodRequestor/RegisterPage.html', {})
 
-def login_page_validation(request):
+def validate_login_page(request):
     print "inside------->>> LOGIN"
-    # document = request.POST
+    document = request.POST
+    uid = document['userid']
+    pwd = document['password']
+    db_values = RegisteredUser.objects.filter(reg_uid=uid).values_list('reg_uid','reg_pwd','reg_name')
+    print "db_values-",db_values
 
-    # data = RegisteredUser.objects.values_list('reg_uid','reg_pwd')
-    # print "uid,pwd-->>",data
+    if len(db_values) == 1 and db_values[0][1] == pwd and db_values[0][0] == uid:
+        context = {'status': True, 'name':db_values[0][2]}
+    else:
+        context = {'status': False, 'name': db_values[0][2]}
+
+    return render(request, 'FoodRequestor/index.html', context)

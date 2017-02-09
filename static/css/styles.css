@@ -8,13 +8,13 @@ body{
 .container{
     align-content: left;
     width: 500px;
-    height: 500px;
+    height: 600px;
     text-align: center;
     background-color: rgba(103,178,228,0.6) ;
     /*background-color: #3498DB ;*/
     /*border-radius: 4px;*/
     margin: 30px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .container img{
     width: 60px;
@@ -58,4 +58,9 @@ h1{
 }
 h5{
     padding-left: 10px;
+}
+
+select{
+    width: 300px;
+    height: 25px;
 }

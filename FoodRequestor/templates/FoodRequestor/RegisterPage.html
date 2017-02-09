@@ -18,7 +18,7 @@
         <form action="reg_data_save" method="post">
             {% csrf_token %}
             <div class="form-input">
-                <input type="text" id ="name" name="name" placeholder="Type Your Name"><br/>
+                <input type="text" id ="name" name="name" placeholder="Type Your Name" required="True"><br/>
             </div>
             <div class="form-input">
                 <input type="email" id ="mailid" name="mailid" placeholder="Type Your MailID"><br/>
@@ -33,7 +33,13 @@
                 <input type="password" id ="rpwd" name ="rpwd" placeholder="Retype Your Password"><br/>
             </div>
             <div class="form-input">
-                <input type="number" id ="contact" name ="contact" placeholder="Type Your Contact No"><br/>
+                <input type="text" id ="contact" pattern="^\d{10}$" name ="contact" placeholder="Type Your Contact No"><br/>
+            </div>
+            <div class="form-input">
+                <select id ="type" name="type_person" value="Select Type">
+                    <option value="distributor">Food Distributor</option>
+                    <option value="requestor">Food Requestor</option>
+                </select>
             </div>
             <div class="form-input">
                 <input type="text" id ="desp" name ="desp" placeholder="Type Description of Food"><br/>

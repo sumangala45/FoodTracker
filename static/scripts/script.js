@@ -68,7 +68,7 @@ function reset(){
     autocomplete.value = "";
 
 }
-
+flag_validation = 0
 function register_to_db(){
     var name = document.getElementById("name");
     var mailid = document.getElementById("mailid");
@@ -79,8 +79,42 @@ function register_to_db(){
     var desp = document.getElementById("desp");
     var autocomplete = document.getElementById("autocomplete");
 
+    validate_email(mailid)
+    validate_contact(contact)
+    if(flag_validation == 1)
+        return False
+    else
+        return True
 }
 
+function validate_email(emailid) {
+    var re=/\S+@\S+.\S/
+    res = re.test(emailid)
+    console.log(res)
+    var pattern = /\S+@\S+.\S/
+    if(emailid.value.match(pattern)){
+        flag_validation = 0
+        console.log("correct email id" )
+        document.getElementById("mailid").innerHTML="correct Email ID";
+    }
+    else{
+        document.getElementById("mailid").innerHTML="Enter correct Email ID";
+        flag_validation = 1
+    }
+}
+
+function validate_contact(contact) {
+    var pattern = /^\d{10}$/
+    if(contact.value.match(pattern)){
+        flag_validation = 0
+        document.getElementById("contact").innerHTML="Correct 10 digit contact number";
+    }
+    else{
+        document.getElementById("contact").innerHTML="Enter 10 digit contact number";
+        flag_validation = 1
+    }
+
+}
 // function submit(){
 //     var location = document.getElementById("location");
 //     var user = document.getElementById("userid");

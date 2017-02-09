@@ -1,5 +1,3 @@
-
-
 body{
     margin :0 auto;
     background: url("/static/images/Nature-Best-HD-Theme-Wallpaper.jpg");
@@ -8,7 +6,7 @@ body{
 }
 .container{
     align-content: left;
-    width: 400px;
+    width: 350px;
     height: 180px;
 
     text-align: left;
@@ -26,7 +24,8 @@ input{
     font-size: 12px;
     margin-bottom: 20px;
     background-color: #fff;
-    padding-left: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
 }
 .form-input::before{
     /*content: "\f0c0";*/
